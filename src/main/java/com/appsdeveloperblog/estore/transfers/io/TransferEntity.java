@@ -22,7 +22,7 @@ public class TransferEntity implements Serializable {
     private String senderId;
 
     @Column(nullable = false)
-    private String recipientId;
+    private String recepientId;
 
     @Column(nullable = false)
     private BigDecimal amount;
@@ -30,10 +30,10 @@ public class TransferEntity implements Serializable {
     public TransferEntity() {
     }
 
-    public TransferEntity(String transferId, String senderId, String recipientId, BigDecimal amount) {
+    public TransferEntity(String transferId, String senderId, String recepientId, BigDecimal amount) {
         this.transferId = transferId;
         this.senderId = senderId;
-        this.recipientId = recipientId;
+        this.recepientId = recepientId;
         this.amount = amount;
     }
 
@@ -53,12 +53,12 @@ public class TransferEntity implements Serializable {
         this.senderId = senderId;
     }
 
-    public String getRecipientId() {
-        return recipientId;
+    public String getRecepientId() {
+        return recepientId;
     }
 
-    public void setRecipientId(String recipientId) {
-        this.recipientId = recipientId;
+    public void setRecepientId(String recipientId) {
+        this.recepientId = recipientId;
     }
 
     public BigDecimal getAmount() {

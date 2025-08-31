@@ -37,7 +37,7 @@ public class TransferServiceImpl implements TransferService {
 		this.transferRepository = transferRepository;
 	}
 
-	@Transactional("kafkaTransactionManager")
+	@Transactional("transactionManager")
 	@Override
 	public boolean transfer(TransferRestModel transferRestModel) {
 		WithdrawalRequestedEvent withdrawalEvent = new WithdrawalRequestedEvent(transferRestModel.getSenderId(),
