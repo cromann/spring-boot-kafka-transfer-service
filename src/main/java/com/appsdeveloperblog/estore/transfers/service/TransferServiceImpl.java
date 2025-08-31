@@ -51,7 +51,7 @@ public class TransferServiceImpl implements TransferService {
 
 		try {
 			transferRepository.save(transferEntity);
-			
+
 			kafkaTemplate.send(environment.getProperty("withdraw-money-topic", "withdraw-money-topic"),
 					withdrawalEvent);
 			LOGGER.info("Sent event to withdrawal topic.");
